@@ -23,6 +23,16 @@ export default function App() {
 
   function handleSubmit(event) {
     event.preventDefault()
+    if (formData.password === formData.passwordConfirm) {
+      console.log("Successfully signed up")
+    } else {
+      console.log("Passwords do not match")
+      return
+    }
+
+    if (formData.joinedNewsletter) {
+      console.log("Thanks for signing up for our newsletter!")
+    }
   }
 
   return (
